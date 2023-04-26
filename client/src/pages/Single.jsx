@@ -22,7 +22,7 @@ const Single = () => {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:4000/api/posts/${postId}`
+          `https://blogs-backend-l7v4.onrender.com/api/posts/${postId}`
         );
         setPost(res.data);
       } catch (error) {
@@ -34,7 +34,7 @@ const Single = () => {
 
   const handelDelete = async (e) => {
     try {
-      await axios.delete(`http://localhost:4000/api/posts/${postId}`);
+      await axios.delete(`https://blogs-backend-l7v4.onrender.com/api/posts/${postId}`);
       navigate("/");
     } catch (error) {
       console.log(`Home.jsx me error hai aur yeh wala hai ${error}`);
