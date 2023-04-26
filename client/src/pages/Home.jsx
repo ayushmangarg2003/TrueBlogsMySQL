@@ -13,7 +13,7 @@ const Home = () => {
   useEffect(()=>{
     const fetchData = async() => {
       try {
-        const res = await axios.get(`http://localhost:4000/api/posts${cat}`)
+        const res = await axios.get(`https://blogs-backend-l7v4.onrender.com/api/posts${cat}`)
         setPosts(res.data)
       } catch (error) {
         console.log(`Home.jsx me error hai ${error}`);
