@@ -42,13 +42,13 @@ const Write = () => {
     e.preventDefault();
     try {
       state
-        ? await axios.put(`http://localhost:4000/api/posts/${state.id}`, {
+        ? await axios.put(`https://blogs-backend-l7v4.onrender.com/api/posts/${state.id}`, {
             title: title,
             descr: value,
             cat: cat,
             img: file,
           })
-        : await axios.post(`http://localhost:4000/api/posts/`, {
+        : await axios.post(`https://blogs-backend-l7v4.onrender.com/api/posts/`, {
             title: title,
             descr: value,
             cat: cat,
