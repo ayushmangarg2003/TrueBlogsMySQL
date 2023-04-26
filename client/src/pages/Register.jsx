@@ -19,7 +19,7 @@ const Register = () => {
   const handleSubmit = async e =>{
     e.preventDefault()
     try {
-      await axios.post(`http://localhost:4000/api/auth/register`,inputs)
+      await axios.post(`https://blogs-backend-l7v4.onrender.com/api/auth/register`,inputs)
       navigate('/login')
 
     } catch (error) {
