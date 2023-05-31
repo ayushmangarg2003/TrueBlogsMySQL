@@ -86,6 +86,17 @@ body {
       }
     }
 
+    // Shimmer
+    .shimmer{
+      width:100%;
+      gap:150px;
+      @media screen and (max-width: 750px) {
+          gap: 50px;
+      }
+      @media screen and (max-width: 450px) {
+          gap: 20px;
+      }
+    }
     //NAVBAR
 
     .navbar {
