@@ -1,17 +1,25 @@
 import React from 'react'
-import {Spinner } from '@chakra-ui/react'
-
+import { ShimmerContentBlock } from "react-shimmer-effects-18";
 const Loader = () => {
   return (
-    <Spinner size='xl' thickness='5px'
-    speed='0.5s'
-    emptyColor='gray.300'
-    color='blue.500'
-    pos={'absolute'}
-    top={'50%'}
-    left={"50%"}
-    transform={'translate(-50% , -50%)'}/>
-  )
-}
+   <>
+   <ShimmerContentBlock
+        title
+        text
+        cta
+        thumbnailWidth={370}
+        thumbnailHeight={370}
+      />
+   <ShimmerContentBlock
+        title
+        text
+        cta
+        thumbnailWidth={370}
+        thumbnailHeight={370}
+      />
+    </>
+  );
+};
+
 
 export default Loader
