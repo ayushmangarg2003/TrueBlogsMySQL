@@ -7,15 +7,15 @@ const Loader = () => {
         title
         text
         cta
-        thumbnailWidth={370}
-        thumbnailHeight={370}
+        thumbnailWidth={270}
+        thumbnailHeight={270}
       />
    <ShimmerContentBlock
         title
         text
         cta
-        thumbnailWidth={370}
-        thumbnailHeight={370}
+        thumbnailWidth={270}
+        thumbnailHeight={270}
       />
     </>
   );
