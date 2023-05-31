@@ -8,15 +8,15 @@ const Loader = () => {
         text
         cta
         reverse
-        thumbnailWidth={270}
-        thumbnailHeight={270}
+        thumbnailWidth={30%}
+        thumbnailHeight={200}
       />
    <ShimmerContentBlock
         title
         text
         cta
-        thumbnailWidth={270}
-        thumbnailHeight={270}
+        thumbnailWidth={30%}
+        thumbnailHeight={200}
       />
     </div>
   );
