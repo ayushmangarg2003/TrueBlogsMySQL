@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Loader from "../components/Loader";
+
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Menu from "../components/Menu";
 import axios from "axios";
@@ -9,6 +11,7 @@ import { AuthContext } from "../context/authContext";
 
 const Single = () => {
   const [post, setPost] = useState({});
+  const [loading, setLoading] = useState(true);
 
   const location = useLocation();
 
@@ -25,8 +28,10 @@ const Single = () => {
           `https://blogs-backend-l7v4.onrender.com/api/posts/${postId}`
         );
         setPost(res.data);
+        setLoading(false);
       } catch (error) {
         console.log(`Home.jsx me error hai aur yeh wala hai ${error}`);
+        setLoading(false);
       }
     };
     fetchData();
@@ -44,6 +49,8 @@ const Single = () => {
   return (
     <>
       <Navbar />
+      {loading ? (<Loader />): (
+        <>
       <div className="single">
         <div className="content">
           <img src={post?.img} alt="" />
@@ -95,6 +102,8 @@ const Single = () => {
         <Menu cat={post.cat} />
       </div>
       <Footer />
+      </>
+      )}
     </>
   );
 };
