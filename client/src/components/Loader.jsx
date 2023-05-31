@@ -7,6 +7,7 @@ const Loader = () => {
         title
         text
         cta
+        reverse
         thumbnailWidth={270}
         thumbnailHeight={270}
       />
