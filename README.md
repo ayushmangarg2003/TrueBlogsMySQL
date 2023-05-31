@@ -1,5 +1,3 @@
-# This is no longer Functional
-
 ## Link to Website
 https://blogs-my-sql.vercel.app/
 
