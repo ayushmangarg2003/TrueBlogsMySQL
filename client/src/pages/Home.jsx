@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Loader from "../components/Loader"
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 
 
 const Home = () => {
   const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const cat = useLocation().search
 
@@ -15,8 +17,11 @@ const Home = () => {
       try {
         const res = await axios.get(`https://blogs-backend-l7v4.onrender.com/api/posts${cat}`)
         setPosts(res.data)
+        setLoading(false)
+
       } catch (error) {
         console.log(`Home.jsx me error hai ${error}`);
+        setLoading(false)
       }
     }
     fetchData()
@@ -24,6 +29,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
+    {loading ? (<Loader/> : (
       <div className="home">
         <div className="posts">
           {posts.map((post) => (
@@ -45,6 +51,7 @@ const Home = () => {
           ))}
         </div>
       </div>
+      )}
       <Footer />
     </>
   );
