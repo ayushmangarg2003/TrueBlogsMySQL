@@ -20,7 +20,7 @@ const Home = () => {
         setPosts(res.data);
         setLoading(false);
       } catch (error) {
-        console.log(`Home.jsx me error hai ${error}`);
+        // console.log(`Error in Home.jsx ${error}`);
         setLoading(false);
       }
     };

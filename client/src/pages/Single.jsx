@@ -30,7 +30,7 @@ const Single = () => {
         setPost(res.data);
         setLoading(false);
       } catch (error) {
-        console.log(`Home.jsx me error hai aur yeh wala hai ${error}`);
+        // console.log(`Home.jsx me error hai aur yeh wala hai ${error}`);
         setLoading(false);
       }
     };
@@ -42,7 +42,7 @@ const Single = () => {
       await axios.delete(`https://blogs-backend-l7v4.onrender.com/api/posts/${postId}`);
       navigate("/");
     } catch (error) {
-      console.log(`Home.jsx me error hai aur yeh wala hai ${error}`);
+      // console.log(`Home.jsx me error hai aur yeh wala hai ${error}`);
     }
   };
 

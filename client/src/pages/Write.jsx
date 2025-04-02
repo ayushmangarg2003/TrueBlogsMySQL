@@ -57,7 +57,7 @@ const Write = () => {
             uid: currentUser.id,
           });
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
     navigate("/");
   };

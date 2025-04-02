@@ -13,7 +13,7 @@ const Menu = ({cat}) => {
         const res = await axios.get(`https://blogs-backend-l7v4.onrender.com/api/posts/?cat=${cat}`)
         setPosts(res.data)
       } catch (error) {
-        console.log(`Home.jsx me error hai aur yeh wala hai ${error}`);
+        // console.log(`Home.jsx me error hai aur yeh wala hai ${error}`);
       }
     }
     fetchData()
