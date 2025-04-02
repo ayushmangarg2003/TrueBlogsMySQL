@@ -97,7 +97,7 @@ const Single = () => {
                 )}
               </div>
               <h1>{post.title}</h1>
-              {post.descr}
+              {post.descr.replace(/<p>/g, '').replace(/<\/p>/g, '')}
             </div>
             <Menu cat={post.cat} />
           </div>
