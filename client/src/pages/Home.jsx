@@ -41,7 +41,7 @@ const Home = () => {
                   <Link className="link" to={`/post/${post.id}`}>
                     <h1>{post.title}</h1>
                   </Link>
-                  <p>{post.descr}</p>
+                  <p>{post.descr.replace(/<p>/g, '').replace(/<\/p>/g, '')}</p>
                   <Link className="link" to={`/post/${post.id}`}>
                     <button>Read More</button>
                   </Link>
