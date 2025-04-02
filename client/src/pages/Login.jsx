@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../context/authContext';
+import Navbar from "../components/Navbar";
 
 const Login = () => {
   const [inputs , setInputs] = useState({
@@ -29,6 +30,8 @@ const Login = () => {
     }
   }
   return (
+    <>
+    <Navbar/>
     <div className='auth'>
       <h1>Login</h1>
       <form>
@@ -39,6 +42,7 @@ const Login = () => {
 }        <span>New here? <Link to='/register'>Register</Link></span>
       </form>
     </div>
+    </>
   )
 }
 
