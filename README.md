@@ -1,7 +1,3 @@
-Here’s a well-structured and systemized version of your README:  
-
----
-
 # **TrueBlog - Full Stack Blogging Platform**  
 
 ## 🌐 Live Website  
@@ -28,6 +24,3 @@ TrueBlog is a full-stack web application built using **Express.js, React.js, Nod
 
 ## 🗄️ Database Deployment  
 🔗 [Clever Cloud SQL Database](https://console.clever-cloud.com/)  
-
----  
-Let me know if you'd like any modifications! 🚀
