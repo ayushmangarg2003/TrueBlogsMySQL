@@ -60,7 +60,7 @@ const Single = () => {
                   <span>{post.username}</span>
                   {post.date && <p>Posted {moment(post.date).fromNow()}</p>}
                 </div>
-                {post.username === currentUser?.username && (
+                {/* {post.username === currentUser?.username && ( */}
                   <div className="edit">
                     {/* <Link to={"/write?edit=2"} state={post}>
                       <svg
@@ -94,7 +94,7 @@ const Single = () => {
                       />
                     </svg>
                   </div>
-                )}
+                {/* )} */}
               </div>
               <h1>{post.title}</h1>
               {post.descr.replace(/<p>/g, '').replace(/<\/p>/g, '')}

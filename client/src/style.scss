@@ -87,14 +87,14 @@ body {
     }
 
     // Shimmer
-    .shimmer{
-      width:100%;
-      gap:150px;
+    .shimmer {
+      width: 100%;
+      gap: 150px;
       @media screen and (max-width: 750px) {
-          gap: 50px;
+        gap: 50px;
       }
       @media screen and (max-width: 450px) {
-          gap: 20px;
+        gap: 20px;
       }
     }
     //NAVBAR
@@ -124,9 +124,9 @@ body {
           @media screen and (max-width: 450px) {
             gap: 12px;
           }
-          .username{
+          .username {
             @media screen and (max-width: 450px) {
-            display: none;
+              display: none;
             }
           }
           .link {
@@ -184,12 +184,26 @@ body {
 
     footer {
       margin-top: 100px;
-      padding: 20px;
+      position: absolute;
+      bottom: 0;
+      width: calc(70vw - 20px);;
+      padding: 10px;
       background-color: $lightGreen;
       display: flex;
       align-items: center;
       justify-content: space-between;
       font-size: 14px;
+
+      @media screen and (max-width: 1200px) {
+        width: calc(80vw - 20px);
+      }
+      @media screen and (max-width: 1000px) {
+        width: calc(90vw - 20px);;
+      }
+      @media screen and (max-width: 775px) {
+        width: calc(95vw - 20px);;
+      }
+
       .logo {
         a {
           font-size: 2rem;
@@ -218,22 +232,22 @@ body {
           display: flex;
           gap: 100px;
           margin-bottom: 40px; /* Added margin-bottom for spacing between posts */
-        
+
           @media screen and (max-width: 1250px) {
             gap: 50px;
           }
           @media screen and (max-width: 750px) {
             gap: 10px;
           }
-        
+
           &:nth-child(2n + 1) {
             flex-direction: row-reverse;
           }
-        
+
           .img {
             flex: 2;
             position: relative;
-        
+
             &::after {
               content: "";
               width: 100%;
@@ -248,7 +262,7 @@ body {
                 display: none;
               }
             }
-        
+
             img {
               width: 100%;
               max-height: 400px;
@@ -256,7 +270,7 @@ body {
               object-fit: cover;
             }
           }
-        
+
           .content {
             flex: 3;
             display: flex;
@@ -271,12 +285,12 @@ body {
             @media screen and (max-width: 750px) {
               flex: 8;
             }
-            
+
             h1 {
               font-size: 48px;
               line-height: 1.1; /* Added line height */
               margin: 0 0 16px 0; /* Added bottom margin */
-              
+
               @media screen and (max-width: 1400px) {
                 font-size: 42px;
               }
@@ -307,12 +321,12 @@ body {
                 font-size: 20px;
               }
             }
-        
+
             p {
               font-size: 18px;
               line-height: 1.6; /* Added line height */
               margin: 0 0 24px 0; /* Added bottom margin */
-              
+
               @media screen and (max-width: 850px) {
                 font-size: 16px;
                 margin-bottom: 20px;
@@ -325,7 +339,7 @@ body {
                 display: none;
               }
             }
-        
+
             button {
               width: max-content;
               padding: 10px 20px;
@@ -336,13 +350,13 @@ body {
               color: teal;
               transition: 0.3s ease;
               margin-top: 4px; /* Small top margin for better spacing */
-              
+
               &:hover {
                 border: 1px solid white;
                 background-color: $lightGreen;
                 color: black;
               }
-              
+
               @media screen and (max-width: 750px) {
                 padding: 4px 8px;
                 font-size: 10px;
@@ -505,7 +519,6 @@ body {
 
         .editorContainer {
           height: 300px;
-          // width: 500px;
           overflow: scroll;
           border: 1px solid lightgray;
 
