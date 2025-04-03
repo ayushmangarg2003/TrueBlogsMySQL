@@ -16,5 +16,5 @@ app.use("/api/posts", postRouter);
 app.use("/api/auth", authRouter);
 
 app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
+  // console.log(`Listening on port ${port}`);
 });
