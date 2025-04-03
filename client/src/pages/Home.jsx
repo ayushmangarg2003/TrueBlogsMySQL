@@ -26,7 +26,7 @@ const Home = () => {
     };
     fetchData();
   }, [cat]);
-  return <>
+  return <div className="homePage">
         <Navbar />
   {loading ? (<Loader />): (
       <>
@@ -54,6 +54,6 @@ const Home = () => {
       </>
       )
     }
-  </>
+  </div>
 }
 export default Home;

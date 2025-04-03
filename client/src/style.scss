@@ -10,6 +10,14 @@ $lightGreen: #7fd9d3;
 body {
   overflow-x: hidden;
 }
+
+.homePage{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .app {
   display: flex;
   justify-content: center;
@@ -184,7 +192,8 @@ body {
 
     footer {
       margin-top: 100px;
-      position: absolute;
+      // position: absolute;
+      
       bottom: 0;
       width: calc(70vw - 20px);;
       padding: 10px;

@@ -73,7 +73,6 @@ const Write = () => {
               value={descr}
               onChange={(e) => setDescr(e.target.value)}
               placeholder="Write here..."
-              
             />
           </div>
 
