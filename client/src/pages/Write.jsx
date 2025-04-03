@@ -25,13 +25,13 @@ const categories = [
 
 const Write = () => {
   const state = useLocation().state;
-  const [value, setValue] = useState(
+  const [descr, setDescr] = useState(
     state?.title || "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, aliquid rem odit dicta, rerum numquam nihil aperiam officiis sed excepturi esse culpa eius tempore? Officiis."
   );
   const [title, setTitle] = useState(state?.descr || "Lorem ipsum dolor sit amet consectetur adipisicing elit.");
   const [file, setFile] = useState(
     state?.file ||
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVhvYmZHdAbdQkw_I9MdK54Nh7GaTiSxTrkg&usqp=CAU"
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVhvYmZHdAbdQkw_I9MdK54Nh7GaTiSxTrkg&usqp=CAU"
   );
   const [cat, setCat] = useState(state?.cat || "");
   const navigate = useNavigate();
@@ -41,23 +41,16 @@ const Write = () => {
   const handelClick = async (e) => {
     e.preventDefault();
     try {
-      state
-        ? await axios.put(`https://blogs-backend-l7v4.onrender.com/api/posts/${state.id}`, {
-            title: title,
-            descr: value,
-            cat: cat,
-            img: file,
-          })
-        : await axios.post(`https://blogs-backend-l7v4.onrender.com/api/posts/`, {
-            title: title,
-            descr: value,
-            cat: cat,
-            img: file,
-            date: moment(Date.now()).format("YYYY-MM-DD HH:mm:ss"),
-            uid: currentUser.id,
-          });
+      await axios.post(`https://blogs-backend-l7v4.onrender.com/api/posts/`, {
+        title: title,
+        descr: descr,
+        cat: cat,
+        img: file,
+        date: moment(Date.now()).format("YYYY-MM-DD HH:mm:ss"),
+        uid: currentUser.id,
+      });
     } catch (error) {
-      // console.log(error);
+      console.log(error);
     }
     navigate("/");
   };
@@ -75,13 +68,15 @@ const Write = () => {
             onChange={(e) => setTitle(e.target.value)}
           />
           <div className="editorContainer">
-            <ReactQuill
+            <textarea
               className="editor"
-              theme="snow"
-              value={value}
-              onChange={setValue}
+              value={descr}
+              onChange={(e) => setDescr(e.target.value)}
+              placeholder="Write here..."
+              
             />
           </div>
+
         </div>
         <div className="menu">
           <div className="item">
