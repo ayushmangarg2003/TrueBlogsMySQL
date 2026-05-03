@@ -9,7 +9,7 @@ const Footer = () => {
             TrueBlog
           </Link>
       </div>
-      <span>Made by <b>Ayushman Garg</b>.</span>
+      <span>Made by <b>KUSHAGRA</b>.</span>
     </footer>
   )
 }
